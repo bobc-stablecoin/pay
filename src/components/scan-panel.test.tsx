@@ -6,7 +6,9 @@ import { ScanPanel } from './scan-panel'
 vi.mock('@zxing/browser', () => ({
   BrowserQRCodeReader: class {
     decodeFromVideoDevice() {
-      return Promise.reject(new DOMException('Permission denied', 'NotAllowedError'))
+      return Promise.reject(
+        new DOMException('Permission denied', 'NotAllowedError'),
+      )
     }
   },
 }))
@@ -17,7 +19,9 @@ it('offers paste fallback when camera access is denied', async () => {
   fireEvent.click(screen.getByRole('button', { name: 'Open camera' }))
 
   await waitFor(() =>
-    expect(screen.getByRole('alert').textContent).toMatch(/Paste the payment code/),
+    expect(screen.getByRole('alert').textContent).toMatch(
+      /Paste the payment code/,
+    ),
   )
   expect(screen.getByRole('button', { name: 'Open camera' })).toBeTruthy()
   expect(onResult).not.toHaveBeenCalled()

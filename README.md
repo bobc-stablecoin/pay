@@ -21,6 +21,10 @@ Receive QRs use ERC-681 BOBC transfer requests on chain 42161, with an optional 
 ## Commands
 
 - `npm run dev` — local server
+- `npm run format` — format project files with Oxfmt
+- `npm run format:check` — check formatting
+- `npm run lint` — lint with Oxlint
+- `npm run lint:fix` — apply safe Oxlint fixes
 - `npm test` — unit tests
 - `npm run typecheck` — TypeScript check
 - `npm run build` — production build

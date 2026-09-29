@@ -160,7 +160,7 @@
 .pay-transaction {
   border-color: rgb(63 203 134 / 32%);
 }
-.pay-transaction[data-status='reverted'] {
+.pay-transaction[data-status="reverted"] {
   border-color: var(--danger);
 }
 .pay-tx-mark {
@@ -174,7 +174,7 @@
   font-weight: 800;
   place-items: center;
 }
-.pay-transaction[data-status='reverted'] .pay-tx-mark {
+.pay-transaction[data-status="reverted"] .pay-tx-mark {
   background: var(--danger);
 }
 .pay-transaction > div {
@@ -222,7 +222,7 @@
   box-shadow:
     0 0 0 3rem rgb(255 255 255 / 3%),
     0 0 0 6rem rgb(255 255 255 / 2%);
-  content: '';
+  content: "";
   pointer-events: none;
 }
 .pay-balance-top,
@@ -464,7 +464,7 @@
   flex: 1;
   height: 1px;
   background: var(--border);
-  content: '';
+  content: "";
 }
 .pay-label {
   display: block;
