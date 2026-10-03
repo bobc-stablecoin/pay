@@ -30,3 +30,7 @@ Receive QRs use ERC-681 BOBC transfer requests on chain 42161, with an optional 
 - `npm run build` — production build
 
 Transactions are simulated before signing. A broadcast hash is shown as pending until a receipt confirms or reverts. Pending hashes persist locally across navigation and refresh. Live transaction testing needs deployed BOBC contracts and a configured Privy app.
+
+## Cloudflare deployment
+
+Run `pnpm deploy` (or `cf deploy`) from this directory. The worker name and runtime settings are defined in `cloudflare.config.ts`. Build-time `VITE_*` values are loaded by Vite from the local environment files.
